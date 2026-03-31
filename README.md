@@ -41,8 +41,8 @@
 Let $z^n_t$ be an observation of the random variable, where is modeled as
 $$
 Z_t = \begin{cases}
-    OR(X, Y) & \text{if } t = 1 \\
-    X |_{Z_1 = 1} & \text{if } t = 2
+    X \lor Y & \text{if } t = 1 \\
+    X \mid Z_1 = 1 & \text{if } t = 2
 \end{cases}, \text{ where } X \sim Ber(p), Y \sim Ber(q)
 $$
 - $Z_t$: Binary test result of the product at $t$-th test
@@ -52,34 +52,34 @@ $$
         - ← Retest는 환경성 이슈가 없는 설비에서 진행된다는 가정
 
 Then the probablility of prime test result is
-$$\begin{align*}
+$$\begin{aligned}
     P(Z_1 = 1) &= P(X = 1 \text{ or } Y = 1) \\
     &= P(X = 1) + P(Y = 1) - P(X = 1 \text{ and } Y = 1) \\
     &= p + q - pq ,
-\end{align*}$$
+\end{aligned}$$
 
 while that of retest result is
 $$
-\begin{align*}
+\begin{aligned}
 P(Z_2 = 1) &= P(X = 1 | Z_1 = 1) \\
 &= P(X = 1 \text{ and } Z_1 = 1) / P(Z_1 = 1) \\
 &= P(X = 1) \cdot P(Z_1 = 1 | X = 1) / P(Z_1 = 1) \\
 &= \dfrac{p \cdot 1}{p + q - pq} .
-\end{align*}
+\end{aligned}
 $$
 
 
 ### Maximum Likelihood Estimator (MLE)
 Since sample proportion is MLE of population proportion, denoting $\hat{\cdot}$ as MLE of $\cdot$,
-- $\widehat{P(Z_1 = 1)} = \widehat{p + q - pq} = S_1 / N_1$
-- $\widehat{P(Z_2 = 1)} = \widehat{p / (p + q - pq)} = S_2 / N_2$.
+- $\displaystyle \widehat{P(Z_1 = 1)} = \widehat{p + q - pq} = S_1 / N_1$
+- $\displaystyle \widehat{P(Z_2 = 1)} = \widehat{p / (p + q - pq)} = S_2 / N_2$.
 
 Using invariance property of MLE, which states that $\widehat{g(\theta)} = g(\hat{\theta})$,
 $$
 \begin{cases}
 \hat{p} + \hat{q} - \hat{p} \hat{q} = S_1 / N_1 \\
 \hat{p} / (\hat{p} + \hat{q} - \hat{p} \hat{q}) = S_2 / N_2
-\end{cases},
+\end{cases} ,
 $$
 which leads to the following solution:
 - $\hat{p} = \dfrac{S_1 S_2}{N_1 N_2}$
