@@ -87,6 +87,7 @@ $$
 \hat{p} / (\hat{p} + \hat{q} - \hat{p} \hat{q}) = S_2 / N_2
 \end{cases} ,
 $$
+
 which leads to the following solution:
 - $\hat{p} = \dfrac{S_1 S_2}{N_1 N_2}$
 - $\hat{q} = \dfrac{S_1 N_2 - S_1 S_2}{N_1 N_2 - S_1 S_2}$
