@@ -113,15 +113,19 @@ $$
 ## PEP Comparison Test
 
 $$
+\begin{equation}
 H_0: q \leq cp \\
 H_1: q > cp
+\end{equation}
 $$
 
 To build Wald Test, defining $\theta = q - cp$, then
 
 $$
+\begin{equation}
 H_0: \theta \leq 0 \\
 H_1: \theta > 0
+\end{equation}
 $$
 
 Test statistic:
@@ -143,4 +147,10 @@ where $\nabla g = \begin{bmatrix} -c & 1 \end{bmatrix}$ and $\Sigma$ is the cova
 
 ### Retest Decision Rule (Confident Ver.)
 
-Retest, that is, reject $H_0$ if $T  > N(0, 1)_{1-\alpha}$, where $N(0, 1)_{1-\alpha}$ denotes the $(1-\alpha)$ quantile of $N(0, 1)$.
+Retest, that is, reject $H_0$ if
+
+$$
+T  > N(0, 1)_{1-\alpha},
+$$
+
+where $N(0, 1)_{1-\alpha}$ denotes the $(1 - \alpha)$ quantile of $N(0, 1)$.
