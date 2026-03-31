@@ -113,19 +113,19 @@ $$
 ## PEP Comparison Test
 
 $$
-\begin{equation}
+\begin{gathered}
 H_0: q \leq cp \\
 H_1: q > cp
-\end{equation}
+\end{gathered}
 $$
 
 To build Wald Test, defining $\theta = q - cp$, then
 
 $$
-\begin{equation}
+\begin{gathered}
 H_0: \theta \leq 0 \\
 H_1: \theta > 0
-\end{equation}
+\end{gathered}
 $$
 
 Test statistic:
