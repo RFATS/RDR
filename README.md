@@ -147,7 +147,7 @@ where $\nabla g = \begin{bmatrix} -c & 1 \end{bmatrix}$ and $\Sigma$ is the cova
 
 ### Retest Decision Rule (Confident Ver.)
 
-Retest, that is, reject $H_0$ if
+Reject $H_0$, that is, decide to retest if
 
 $$
 T  > N(0, 1)_{1-\alpha},
